@@ -9,4 +9,9 @@ public class DateCheckerTest {
     public void testJanuaryHas31Days() {
         assertTrue(dateChecker.has31Days(DateChecker.Month.JANUARY));
     }
+
+    @Test
+    public void testAprilHas30Days() {
+        assertFalse(dateChecker.has31Days(DateChecker.Month.APRIL));
+    }
 }
