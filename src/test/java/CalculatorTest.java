@@ -89,7 +89,10 @@ public class CalculatorTest {
     public void testIsEven() {
         // Even result
         assertTrue(calculator.isEven(2));
+    }
 
+    @Test
+    public void testIsOdd() {
         // Odd result
         assertFalse(calculator.isEven(3));
     }
