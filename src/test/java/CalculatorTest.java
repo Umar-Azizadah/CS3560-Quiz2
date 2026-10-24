@@ -84,4 +84,15 @@ public class CalculatorTest {
         // Division by zero
         assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
     }
+
+    @Test
+    public void testIsEven() {
+        boolean expected = true;
+        boolean actual = calculator.isEven(2);
+        assertEquals(expected,actual);
+
+        expected = false;
+        actual = calculator.isEven(3);
+        assertEquals(expected,actual);
+    }
 }
