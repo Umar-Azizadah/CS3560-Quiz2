@@ -16,9 +16,19 @@ public class CalculatorTest {
 
     @Test
     public void testSum() {
-        // Positive, negative, and zero values
-        assertEquals(4,calculator.sum(1,3));
-        assertEquals(-5,calculator.sum(-3, -2));
-        assertEquals(2,calculator.sum(0, 2));
+        // Test positive numbers
+        int expected = 4;
+        int actual = calculator.sum(1, 3);
+        assertEquals(expected, actual);
+
+        // Test negative numbers
+        expected = -5;
+        actual = calculator.sum(-3, -2);
+        assertEquals(expected, actual);
+
+        // Test zero
+        expected = 2;
+        actual = calculator.sum(0, 2);
+        assertEquals(expected, actual);
     }
 }
