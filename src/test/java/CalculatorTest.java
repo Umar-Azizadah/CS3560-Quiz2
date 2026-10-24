@@ -6,6 +6,7 @@
 import org.junit.jupiter.api.Test; // For annotation
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
     // As we are testing calculator here we will need to instanitate it
@@ -66,5 +67,21 @@ public class CalculatorTest {
         expected = 0;
         actual = calculator.multiply(100, 0);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testQuotient() {
+        // Normal division
+        int expected = 5;
+        int actual = calculator.divide(10, 2);
+        assertEquals(expected, actual);
+
+        // Integer division
+        expected = 3;
+        actual = calculator.divide(7, 2);
+        assertEquals(expected, actual);
+
+        // Division by zero
+        assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
     }
 }
