@@ -49,4 +49,22 @@ public class CalculatorTest {
         actual = calculator.subtract(5, 0);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testMultiply() {
+        // Positive result
+        int expected = 2;
+        int actual = calculator.multiply(1, 2);
+        assertEquals(expected, actual);
+
+        // Negative result
+        expected = -12;
+        actual = calculator.multiply(-3, 4);
+        assertEquals(expected, actual);
+
+        // Zero result
+        expected = 0;
+        actual = calculator.multiply(100, 0);
+        assertEquals(expected, actual);
+    }
 }
