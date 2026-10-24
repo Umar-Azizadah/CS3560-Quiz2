@@ -5,8 +5,8 @@
 
 import org.junit.jupiter.api.Test; // For annotation
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class CalculatorTest {
     // As we are testing calculator here we will need to instanitate it
@@ -87,12 +87,10 @@ public class CalculatorTest {
 
     @Test
     public void testIsEven() {
-        boolean expected = true;
-        boolean actual = calculator.isEven(2);
-        assertEquals(expected,actual);
+        // Even result
+        assertTrue(calculator.isEven(2));
 
-        expected = false;
-        actual = calculator.isEven(3);
-        assertEquals(expected,actual);
+        // Odd result
+        assertFalse(calculator.isEven(3));
     }
 }
