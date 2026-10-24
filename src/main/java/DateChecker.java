@@ -26,7 +26,10 @@ public class DateChecker {
         return switch (month) {
             case JANUARY, MARCH, MAY, JULY,
                  AUGUST, OCTOBER, DECEMBER -> true;
-            default -> false;
+
+            // February and the 30-day months
+            case FEBRUARY, APRIL, JUNE,
+                 SEPTEMBER, NOVEMBER -> false;
         };
     }
 }
